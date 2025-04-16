@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang chủ Kalium Demo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+    }
+    .header {
+      background: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .logo-header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .navbar {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav {
+      position: relative;
+      cursor: pointer;
+    }
+    .nav .subnav {
+      display: none;
+      position: absolute;
+      background-color: white;
+      padding: 10px;
+      top: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+    .nav:hover .subnav {
+      display: block;
+    }
+    .album-section {
+      padding: 40px 20px;
+    }
+    .album-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .album-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .album-item {
+      background: #fff;
+      width: 180px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .img-container {
+      position: relative;
+    }
+    .img-container img {
+      width: 100%;
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .img-container:hover .overlay {
+      opacity: 1;
+    }
+    .icon-group i {
+      margin: 0 8px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .album-name {
+      font-weight: bold;
+      padding: 10px;
+    }
+    .artist-name {
+      padding: 0 10px 10px 10px;
+      color: gray;
+      font-size: 14px;
+    }
+    .creative-text {
+      color: #ff4b5c;
+      font-weight: bold;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .grid-item img {
+      width: 100%;
+      display: block;
+    }
+    .grid-item .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid-item:hover .overlay {
+      opacity: 1;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .horizontal-menu {
+      text-align: center;
+      margin: 20px;
+    }
+    .horizontal-menu a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .horizontal-menu .active {
+      font-weight: bold;
+      color: #ff4b5c;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-header"><h1>Kalium</h1></div>
+    <div class="navbar">
+      <div class="nav">Home</div>
+      <div class="nav">Shop</div>
+      <div class="nav">Product</div>
+      <div class="nav">News</div>
+      <div class="nav">Pages</div>
+      <div class="nav">Buy Now</div>
+      <div class="nav"><i class="fa fa-search"></i></div>
+      <div class="nav"><i class="fa fa-shopping-bag"></i></div>
+    </div>
+  </div>
+
+  <!-- ALBUM HOT -->
+  <div class="album-section">
+    <div class="album-title">Album Hot</div>
+    <div class="album-list">
+      <!-- You can copy the album-item block multiple times or load dynamically -->
+      <div class="album-item">
+        <div class="img-container">
+          <img src="b1.jpg" alt="Album 1">
+          <div class="overlay">
+            <div class="icon-group">
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-play-circle"></i>
+              <i class="fa fa-ellipsis-h"></i>
+            </div>
+          </div>
+        </div>
+        <div class="album-name">Baby Honey (Single)</div>
+        <div class="artist-name">DUYDATDO, Đức Anh, Kiyoshi Phan</div>
+      </div>
+      <!-- Add more albums if needed -->
+    </div>
+  </div>
+
+  <!-- CREATIVE GRID -->
+  <h1>Clear thinking at the wrong moment can stifle <span class="creative-text">creative</span></h1>
+  <nav class="horizontal-menu">
+    <a href="#" class="active">All</a>
+    <a href="#">Branding</a>
+    <a href="#">Digital Art</a>
+    <a href="#">Photography</a>
+    <a href="#">Print</a>
+  </nav>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/05/adestra-c-558x372.jpg" alt="Creative 1">
+      <div class="overlay">
+        <span>❤️</span>
+        <h2>ADESTRA</h2>
+        <p>Branding, Print</p>
+      </div>
+    </div>
+    <!-- Add more creative grid-items if needed -->
+  </div>
+</body>
+</html>
